@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <title>Bingo Carrão</title>
 </head>
 
 <body>
+    <img src="./background.jpg" alt="Logo Seinen Carrão" class="logoCarrao">
+    <button class="button" onclick="btnSortear()">Sortear</button>
     <header>
         <h1>Número<br>Sorteado</h1>
         <div class="p_numeroSorteio">
-            <p>0</p>
+            <div id="div_numeroSorteado" class="numeroSorteado"></div>
         </div>
     </header>
     <main>
@@ -43,6 +46,7 @@
                         <p>13</p>
                     </div>
                 </div>
+                <div class="frame">
                     <div class="numero">
                         <p>2</p>
                     </div>
@@ -65,12 +69,254 @@
                         <p>14</p>
                     </div>
                 </div>
-                <div class="numero">
-                    <p>15</p>
+            </div>
+            <div class="numero">
+                <p>15</p>
+            </div>
+        </div>
+        <div class="cedula">
+            <p>I</p>
+            <div class="conteudo">
+                <div class="frame">
+                    <div class="numero">
+                        <p>16</p>
+                    </div>
+                    <div class="numero">
+                        <p>18</p>
+                    </div>
+                    <div class="numero">
+                        <p>20</p>
+                    </div>
+                    <div class="numero">
+                        <p>22</p>
+                    </div>
+                    <div class="numero">
+                        <p>24</p>
+                    </div>
+                    <div class="numero">
+                        <p>26</p>
+                    </div>
+                    <div class="numero">
+                        <p>28</p>
+                    </div>
                 </div>
+                <div class="frame">
+                    <div class="numero">
+                        <p>17</p>
+                    </div>
+                    <div class="numero">
+                        <p>19</p>
+                    </div>
+                    <div class="numero">
+                        <p>21</p>
+                    </div>
+                    <div class="numero">
+                        <p>23</p>
+                    </div>
+                    <div class="numero">
+                        <p>25</p>
+                    </div>
+                    <div class="numero">
+                        <p>27</p>
+                    </div>
+                    <div class="numero">
+                        <p>29</p>
+                    </div>
+                </div>
+            </div>
+            <div class="numero">
+                <p>30</p>
+            </div>
+        </div>
+        <div class="cedula">
+            <p>N</p>
+            <div class="conteudo">
+                <div class="frame">
+                    <div class="numero">
+                        <p>31</p>
+                    </div>
+                    <div class="numero">
+                        <p>33</p>
+                    </div>
+                    <div class="numero">
+                        <p>35</p>
+                    </div>
+                    <div class="numero">
+                        <p>37</p>
+                    </div>
+                    <div class="numero">
+                        <p>39</p>
+                    </div>
+                    <div class="numero">
+                        <p>41</p>
+                    </div>
+                    <div class="numero">
+                        <p>43</p>
+                    </div>
+                </div>
+                <div class="frame">
+                    <div class="numero">
+                        <p>32</p>
+                    </div>
+                    <div class="numero">
+                        <p>34</p>
+                    </div>
+                    <div class="numero">
+                        <p>36</p>
+                    </div>
+                    <div class="numero">
+                        <p>38</p>
+                    </div>
+                    <div class="numero">
+                        <p>40</p>
+                    </div>
+                    <div class="numero">
+                        <p>42</p>
+                    </div>
+                    <div class="numero">
+                        <p>44</p>
+                    </div>
+                </div>
+            </div>
+            <div class="numero">
+                <p>45</p>
+            </div>
+        </div>
+        <div class="cedula">
+            <p>G</p>
+            <div class="conteudo">
+                <div class="frame">
+                    <div class="numero">
+                        <p>46</p>
+                    </div>
+                    <div class="numero">
+                        <p>48</p>
+                    </div>
+                    <div class="numero">
+                        <p>50</p>
+                    </div>
+                    <div class="numero">
+                        <p>52</p>
+                    </div>
+                    <div class="numero">
+                        <p>54</p>
+                    </div>
+                    <div class="numero">
+                        <p>11</p>
+                    </div>
+                    <div class="numero">
+                        <p>13</p>
+                    </div>
+                </div>
+                <div class="frame">
+                    <div class="numero">
+                        <p>47</p>
+                    </div>
+                    <div class="numero">
+                        <p>49</p>
+                    </div>
+                    <div class="numero">
+                        <p>51</p>
+                    </div>
+                    <div class="numero">
+                        <p>53</p>
+                    </div>
+                    <div class="numero">
+                        <p>55</p>
+                    </div>
+                    <div class="numero">
+                        <p>57</p>
+                    </div>
+                    <div class="numero">
+                        <p>59</p>
+                    </div>
+                </div>
+            </div>
+            <div class="numero">
+                <p>60</p>
+            </div>
+        </div>
+        <div class="cedula">
+            <p>O</p>
+            <div class="conteudo">
+                <div class="frame">
+                    <div class="numero">
+                        <p>61</p>
+                    </div>
+                    <div class="numero">
+                        <p>63</p>
+                    </div>
+                    <div class="numero">
+                        <p>65</p>
+                    </div>
+                    <div class="numero">
+                        <p>67</p>
+                    </div>
+                    <div class="numero">
+                        <p>69</p>
+                    </div>
+                    <div class="numero">
+                        <p>71</p>
+                    </div>
+                    <div class="numero">
+                        <p>73</p>
+                    </div>
+                </div>
+                <div class="frame">
+                    <div class="numero">
+                        <p>62</p>
+                    </div>
+                    <div class="numero">
+                        <p>64</p>
+                    </div>
+                    <div class="numero">
+                        <p>66</p>
+                    </div>
+                    <div class="numero">
+                        <p>68</p>
+                    </div>
+                    <div class="numero">
+                        <p>70</p>
+                    </div>
+                    <div class="numero">
+                        <p>72</p>
+                    </div>
+                    <div class="numero">
+                        <p>74</p>
+                    </div>
+                </div>
+            </div>
+            <div class="numero">
+                <p>75</p>
             </div>
         </div>
     </main>
 </body>
 
 </html>
+
+<script>
+    var listaDeNumeros = [];
+    
+    function btnSortear(){
+        var sorteador = parseInt(1 + Math.random() * 75);
+        div_numeroSorteado.innerHTML = sorteador;
+        // sorteador
+        
+        if(listaDeNumeros.length == 0){
+            listaDeNumeros.push(sorteador);
+            
+        } else {
+            while(true){
+                var sorteador = parseInt(1 + Math.random() * 75)
+                if(listaDeNumeros.indexOf(sorteador) < 0){
+                    listaDeNumeros.push(sorteador);
+                    break;
+                }
+            }
+        }
+
+        console.log(sorteador)
+    }
+
+</script>

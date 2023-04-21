@@ -7,24 +7,52 @@ body{
     isolation: isolate;
 }
 
+.logoCarrao{
+    position: absolute;
+    width: 195px;
+    height: 195px;
+    left: -6px;
+    top: 0px;
+}
+
+.button{
+    position: absolute;
+    background-color: #95D50C;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    padding: 5px 15px;
+    right: 300px;
+    top: 70px;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: #2DBD64;
+    transition: 1s;
+}
+
 header{
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 25px 10px;
+    /* padding: 25px 10px; */
     gap: 61px;
 }
 
 header h1{
-    width: 437px;
-    height: 132px;
+    /* width: 437px;
+    height: 132px; */
     font-style: normal;
-    font-size: 57px;
-    line-height: 66px;
+    font-size: 36px;
+    line-height: 37px;
     display: flex;
     align-items: center;
     text-align: center;
+    font-weight: 700;
 }
 
 .p_numeroSorteio{
@@ -34,12 +62,17 @@ header h1{
     align-items: center;
     padding: 10px;
     gap: 10px;
-    width: 147px;
+    width: 15px;
     height: 147px;
 }
 
+.numeroSorteado{
+    font-size: 36px;
+    font-weight: 700;
+}
+
 header p{
-    font-size: 57px;
+    font-size: 36px;
     font-weight: 700;
 }
 
@@ -49,8 +82,8 @@ main{
     align-items: flex-start;
     padding: 10px;
     gap: 74px;
-    width: 1676px;
-    height: 842px;
+    /* width: 1676px;
+    height: 842px; */
 }
 
 .cedula{
@@ -61,25 +94,30 @@ main{
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    gap: 10px;
+    /* gap: 10px; */
 
-    width: 272px;
-    height: 822px;
+    /* width: 272px;
+    height: 822px; */
 }
 
 .cedula p{
     font-weight: 700;
-    font-size: 50px;
-    line-height: 58px;
+    font-size: 36px;
+    line-height: 26px;
     text-align: center;
+    padding: 10px;
+    /* width: 38px;
+    height: 58px; */
 }
 
 .conteudo{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 10px;
-    gap: 10px;
+    /* padding: 10px; */
+    /* gap: 10px;
+    width: 252px;
+    height: 646px; */
 }
 
 .frame{
@@ -88,4 +126,18 @@ main{
     align-items: center;
     padding: 10px;
     gap: 10px;
+    /* width: 69px; */
+    /* height: 626px; */
+}
+
+.numero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+    /* gap: 10px; */
+    width: 70px;
+    height: 61px; 
+    background-color: none;
 }
