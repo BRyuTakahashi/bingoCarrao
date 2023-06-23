@@ -5,68 +5,300 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Bingo Carrão</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./icon.png">
+    <title>Bingo</title>
 </head>
 
 <body>
+    <img src="./assets/images/oroku-tabaru-logo.png" alt="Logo Oroku Tabaru Yuna-kai" class="logo">
+    <!-- <button class="btnSortear" onclick="btn_sortear()">Sortear</button> -->
+    <!-- <button class="btnResetar" onclick="btn_resetar()">Resetar</button> -->
     <header>
         <h1>Número<br>Sorteado</h1>
         <div class="p_numeroSorteio">
-            <p>0</p>
+            <div id="div_numeroSorteado" class="numeroSorteado"></div>
         </div>
     </header>
     <main>
         <div class="cedula">
-            <p>B</p>
+            <p class="letra">B</p>
             <div class="conteudo">
                 <div class="frame">
-                    <div class="numero">
-                        <p>1</p>
+                    <div class="numero" id="um" onclick="numeroEscolhido(1)">
+                        1
                     </div>
-                    <div class="numero">
-                        <p>3</p>
+                    <div class="numero" id="quatro" onclick="numeroEscolhido(4)">
+                        4
                     </div>
-                    <div class="numero">
-                        <p>5</p>
+                    <div class="numero" id="sete" onclick="numeroEscolhido(7)">
+                        7
                     </div>
-                    <div class="numero">
-                        <p>7</p>
+                    <div class="numero" id="dez" onclick="numeroEscolhido(10)">
+                        10
                     </div>
-                    <div class="numero">
-                        <p>9</p>
-                    </div>
-                    <div class="numero">
-                        <p>11</p>
-                    </div>
-                    <div class="numero">
-                        <p>13</p>
+                    <div class="numero" id="treze" onclick="numeroEscolhido(13)">
+                        13
                     </div>
                 </div>
-                    <div class="numero">
-                        <p>2</p>
+                <div class="frame">
+                    <div class="numero" id="dois" onclick="numeroEscolhido(2)">
+                        2
                     </div>
-                    <div class="numero">
-                        <p>4</p>
+                    <div class="numero" id="cinco" onclick="numeroEscolhido(5)">
+                        5
                     </div>
-                    <div class="numero">
-                        <p>6</p>
+                    <div class="numero" id="oito" onclick="numeroEscolhido(8)">
+                        8
                     </div>
-                    <div class="numero">
-                        <p>8</p>
+                    <div class="numero" id="onze" onclick="numeroEscolhido(11)">
+                        11
                     </div>
-                    <div class="numero">
-                        <p>10</p>
-                    </div>
-                    <div class="numero">
-                        <p>12</p>
-                    </div>
-                    <div class="numero">
-                        <p>14</p>
+                    <div class="numero" id="quatorze" onclick="numeroEscolhido(14)">
+                        14
                     </div>
                 </div>
-                <div class="numero">
-                    <p>15</p>
+                <div class="frame">
+                    <div class="numero" id="tres" onclick="numeroEscolhido(3)">
+                        3
+                    </div>
+                    <div class="numero" id="seis" onclick="numeroEscolhido(6)">
+                        6
+                    </div>
+                    <div class="numero" id="nove" onclick="numeroEscolhido(9)">
+                        9
+                    </div>
+                    <div class="numero" id="doze" onclick="numeroEscolhido(12)">
+                        12
+                    </div>
+                    <div class="numero" id="quinze" onclick="numeroEscolhido(15)">
+                        15
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cedula">
+            <p class="letra">I</p>
+            <div class="conteudo">
+                <div class="frame">
+                    <div class="numero" id="dezesseis"  onclick="numeroEscolhido16()">
+                        16
+                    </div>
+                    <div class="numero" id="dezenove"  onclick="numeroEscolhido19()">
+                        19
+                    </div>
+                    <div class="numero" id="vinteDois"  onclick="numeroEscolhido22()">
+                        22
+                    </div>
+                    <div class="numero" id="vinteCinco"  onclick="numeroEscolhido25()">
+                        25
+                    </div>
+                    <div class="numero" id="vinteOito"  onclick="numeroEscolhido28()">
+                        28
+                    </div>
+                </div>
+                <div class="frame">
+                    <div class="numero" id="dezessete"  onclick="numeroEscolhido17()">
+                        17
+                    </div>
+                    <div class="numero" id="vinte"  onclick="numeroEscolhido20()">
+                        20
+                    </div>
+                    <div class="numero" id="vinteTres"  onclick="numeroEscolhido23()">
+                        23
+                    </div>
+                    <div class="numero" id="vinteSeis"  onclick="numeroEscolhido26()">
+                        26
+                    </div>
+                    <div class="numero" id="vinteNove"  onclick="numeroEscolhido29()">
+                        29
+                    </div>
+                </div>
+                <div class="frame">
+                    <div class="numero" id="dezoito"  onclick="numeroEscolhido18()">
+                        18
+                    </div>
+                    <div class="numero" id="vinteUm"  onclick="numeroEscolhido21()">
+                        21
+                    </div>
+                    <div class="numero" id="vinteQuatro"  onclick="numeroEscolhido24()">
+                        24
+                    </div>
+                    <div class="numero" id="vinteSete"  onclick="numeroEscolhido27()">
+                        27
+                    </div>
+                    <div class="numero" id="trinta"  onclick="numeroEscolhido30()">
+                        30
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cedula">
+            <p class="letra">N</p>
+            <div class="conteudo">
+                <div class="frame">
+                    <div class="numero" id="trintaUm" onclick="numeroEscolhido31()">
+                        31
+                    </div>
+                    <div class="numero" id="trintaQuatro" onclick="numeroEscolhido34()">
+                        34
+                    </div>
+                    <div class="numero" id="trintaSete" onclick="numeroEscolhido37()">
+                        37
+                    </div>
+                    <div class="numero" id="quarenta" onclick="numeroEscolhido40()">
+                        40
+                    </div>
+                    <div class="numero" id="quarentaTres" onclick="numeroEscolhido43()">
+                        43
+                    </div>
+                </div>
+                <div class="frame">
+                    <div class="numero" id="trintaDois" onclick="numeroEscolhido32()">
+                        32
+                    </div>
+                    <div class="numero" id="trintaCinco" onclick="numeroEscolhido35()">
+                        35
+                    </div>
+                    <div class="numero" id="trintaOito" onclick="numeroEscolhido38()">
+                        38
+                    </div>
+                    <div class="numero" id="quarentaUm" onclick="numeroEscolhido41()">
+                        41
+                    </div>
+                    <div class="numero" id="quarentaQuatro" onclick="numeroEscolhido44()">
+                        44
+                    </div>
+                </div>
+                <div class="frame">
+                    <div class="numero" id="trintaTres" onclick="numeroEscolhido33()">
+                        33
+                    </div>
+                    <div class="numero" id="trintaSeis" onclick="numeroEscolhido36()">
+                        36
+                    </div>
+                    <div class="numero" id="trintaNove" onclick="numeroEscolhido39()">
+                        39
+                    </div>
+                    <div class="numero" id="quarentaDois" onclick="numeroEscolhido42()">
+                        42
+                    </div>
+                    <div class="numero" id="quarentaCinco" onclick="numeroEscolhido45()">
+                        45
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cedula">
+            <p class="letra">G</p>
+            <div class="conteudo">
+                <div class="frame">
+                    <div class="numero" id="quarentaSeis" onclick="numeroEscolhido46()">
+                        46
+                    </div>
+                    <div class="numero" id="quarentaNove" onclick="numeroEscolhido49()">
+                        49
+                    </div>
+                    <div class="numero" id="cinquentaDois" onclick="numeroEscolhido52()">
+                        52
+                    </div>
+                    <div class="numero" id="cinquentaCinco" onclick="numeroEscolhido55()">
+                        55
+                    </div>
+                    <div class="numero" id="cinquentaOito" onclick="numeroEscolhido58()">
+                        58
+                    </div>
+                </div>
+                <div class="frame">
+                    <div class="numero" id="quarentaSete" onclick="numeroEscolhido47()">
+                        47
+                    </div>
+                    <div class="numero" id="cinquenta" onclick="numeroEscolhido50()">
+                        50
+                    </div>
+                    <div class="numero" id="cinquentaTres" onclick="numeroEscolhido53()">
+                        53
+                    </div>
+                    <div class="numero" id="cinquentaSeis" onclick="numeroEscolhido56()">
+                        56
+                    </div>
+                    <div class="numero" id="cinquentaNove" onclick="numeroEscolhido59()">
+                        59
+                    </div>
+                </div>
+                <div class="frame">
+                    <div class="numero" id="quarentaOito" onclick="numeroEscolhido48()">
+                        48
+                    </div>
+                    <div class="numero" id="cinquentaUm" onclick="numeroEscolhido51()">
+                        51
+                    </div>
+                    <div class="numero" id="cinquentaQuatro" onclick="numeroEscolhido54()">
+                        54
+                    </div>
+                    <div class="numero" id="cinquentaSete" onclick="numeroEscolhido57()">
+                        57
+                    </div>
+                    <div class="numero" id="sessenta" onclick="numeroEscolhido60()">
+                        60
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cedula">
+            <p class="letra">O</p>
+            <div class="conteudo">
+                <div class="frame">
+                    <div class="numero" id="sessentaUm" onclick="numeroEscolhido61()">
+                        61
+                    </div>
+                    <div class="numero" id="sessentaQuatro" onclick="numeroEscolhido64()">
+                        64
+                    </div>
+                    <div class="numero" id="sessentaSete" onclick="numeroEscolhido67()">
+                        67
+                    </div>
+                    <div class="numero" id="setenta" onclick="numeroEscolhido70()">
+                        70
+                    </div>
+                    <div class="numero" id="setentaTres" onclick="numeroEscolhido73()">
+                        73
+                    </div>
+                </div>
+                <div class="frame">
+                    <div class="numero" id="sessentaDois" onclick="numeroEscolhido62()">
+                        62
+                    </div>
+                    <div class="numero" id="sessentaCinco" onclick="numeroEscolhido65()">
+                        65
+                    </div>
+                    <div class="numero" id="sessentaOito" onclick="numeroEscolhido68()">
+                        68
+                    </div>
+                    <div class="numero" id="setentaUm" onclick="numeroEscolhido71()">
+                        71
+                    </div>
+                    <div class="numero" id="setentaQuatro" onclick="numeroEscolhido74()">
+                        74
+                    </div>
+                </div>
+                <div class="frame">
+                    <div class="numero" id="sessentaTres" onclick="numeroEscolhido63()">
+                        63
+                    </div>
+                    <div class="numero" id="sessentaSeis" onclick="numeroEscolhido66()">
+                        66
+                    </div>
+                    <div class="numero" id="sessentaNove" onclick="numeroEscolhido69()">
+                        69
+                    </div>
+                    <div class="numero" id="setentaDois" onclick="numeroEscolhido72()">
+                        72
+                    </div>
+                    <div class="numero" id="setentaCinco" onclick="numeroEscolhido75()">
+                        75
+                    </div>
                 </div>
             </div>
         </div>
@@ -74,3 +306,1821 @@
 </body>
 
 </html>
+
+<script>
+    var listaSelecionados = [];
+
+    function numeroEscolhido(numero){
+
+        var letra = '';
+
+        switch(numero){
+            case 1:
+            letra = 'B';
+        }
+
+        if(listaSelecionados.indexOf(numero) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == numero){
+                listaSelecionados.splice(i, numero);
+                }
+            }
+        um.innerHTML = `
+            <div class="numero">
+                <span>${numero}</span>
+            </div>
+        `
+        } else{
+            listaSelecionados.push(numero);
+            um.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>${numero}</span>
+            </div>
+        `
+
+        }
+
+        div_numeroSorteado.innerHTML = `${numero} ${letra}`
+
+    }
+
+    function numeroEscolhido2(){
+
+        if(listaSelecionados.indexOf(2) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 2){
+                    listaSelecionados.splice(i, 2);
+                }
+            }
+            dois.innerHTML = `
+            <div class="numero">
+                <span>2</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(2);
+            dois.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>2</span>
+            </div>
+            `
+
+        }
+
+    }
+
+    function numeroEscolhido3(){
+
+        if(listaSelecionados.indexOf(3) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 3){
+                    listaSelecionados.splice(i, 3);
+                }
+            }
+            tres.innerHTML = `
+            <div class="numero">
+                <span>3</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(3);
+            tres.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>3</span>
+            </div>
+            `
+
+        }
+
+    }
+    
+    function numeroEscolhido4(){
+
+        if(listaSelecionados.indexOf(4) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 4){
+                    listaSelecionados.splice(i, 4);
+                }
+            }
+            quatro.innerHTML = `
+            <div class="numero">
+                <span>4</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(4);
+            quatro.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>4</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido5(){
+
+        if(listaSelecionados.indexOf(5) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 5){
+                    listaSelecionados.splice(i, 5);
+                }
+            }
+            cinco.innerHTML = `
+            <div class="numero">
+                <span>5</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(5);
+            cinco.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>5</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido6(){
+
+        if(listaSelecionados.indexOf(6) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 6){
+                    listaSelecionados.splice(i, 6);
+                }
+            }
+            seis.innerHTML = `
+            <div class="numero">
+                <span>6</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(6);
+            seis.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>6</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido7(){
+
+        if(listaSelecionados.indexOf(7) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 7){
+                    listaSelecionados.splice(i, 7);
+                }
+            }
+            sete.innerHTML = `
+            <div class="numero">
+                <span>7</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(7);
+            sete.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>7</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido8(){
+
+        if(listaSelecionados.indexOf(8) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 8){
+                    listaSelecionados.splice(i, 8);
+                }
+            }
+            oito.innerHTML = `
+            <div class="numero">
+                <span>8</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(8);
+            oito.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>8</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido9(){
+
+        if(listaSelecionados.indexOf(9) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 9){
+                    listaSelecionados.splice(i, 9);
+                }
+            }
+            nove.innerHTML = `
+            <div class="numero">
+                <span>9</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(9);
+            nove.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>9</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido10(){
+
+        if(listaSelecionados.indexOf(10) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 10){
+                    listaSelecionados.splice(i, 10);
+                }
+            }
+            dez.innerHTML = `
+            <div class="numero">
+                <span>10</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(10);
+            dez.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>10</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido11(){
+
+        if(listaSelecionados.indexOf(11) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 11){
+                    listaSelecionados.splice(i, 11);
+                }
+            }
+            onze.innerHTML = `
+            <div class="numero">
+                <span>11</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(11);
+            onze.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>11</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido12(){
+
+        if(listaSelecionados.indexOf(12) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 12){
+                    listaSelecionados.splice(i, 12);
+                }
+            }
+            doze.innerHTML = `
+            <div class="numero">
+                <span>12</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(12);
+            doze.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>12</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido13(){
+
+        if(listaSelecionados.indexOf(13) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 13){
+                    listaSelecionados.splice(i, 13);
+                }
+            }
+            treze.innerHTML = `
+            <div class="numero">
+                <span>13</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(13);
+            treze.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>13</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido14(){
+
+        if(listaSelecionados.indexOf(14) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 14){
+                    listaSelecionados.splice(i, 14);
+                }
+            }
+            quatorze.innerHTML = `
+            <div class="numero">
+                <span>14</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(14);
+            quatorze.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>14</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido15(){
+
+        if(listaSelecionados.indexOf(15) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 15){
+                    listaSelecionados.splice(i, 15);
+                }
+            }
+            quinze.innerHTML = `
+            <div class="numero">
+                <span>15</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(15);
+            quinze.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>15</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido16(){
+
+        if(listaSelecionados.indexOf(16) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 16){
+                    listaSelecionados.splice(i, 16);
+                }
+            }
+            dezesseis.innerHTML = `
+            <div class="numero">
+                <span>16</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(16);
+            dezesseis.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>16</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido17(){
+
+        if(listaSelecionados.indexOf(17) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 17){
+                    listaSelecionados.splice(i, 17);
+                }
+            }
+            dezessete.innerHTML = `
+            <div class="numero">
+                <span>17</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(17);
+            dezessete.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>17</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido18(){
+
+        if(listaSelecionados.indexOf(18) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 18){
+                    listaSelecionados.splice(i, 18);
+                }
+            }
+            dezoito.innerHTML = `
+            <div class="numero">
+                <span>18</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(18);
+            dezoito.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>18</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido19(){
+
+        if(listaSelecionados.indexOf(19) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 19){
+                    listaSelecionados.splice(i, 19);
+                }
+            }
+            dezenove.innerHTML = `
+            <div class="numero">
+                <span>19</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(19);
+            dezenove.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>19</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido20(){
+
+        if(listaSelecionados.indexOf(20) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 20){
+                    listaSelecionados.splice(i, 20);
+                }
+            }
+            vinte.innerHTML = `
+            <div class="numero">
+                <span>20</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(20);
+            vinte.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>20</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido21(){
+
+        if(listaSelecionados.indexOf(21) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 21){
+                    listaSelecionados.splice(i, 21);
+                }
+            }
+            vinteUm.innerHTML = `
+            <div class="numero">
+                <span>21</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(21);
+            vinteUm.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>21</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido22(){
+
+        if(listaSelecionados.indexOf(22) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 22){
+                    listaSelecionados.splice(i, 22);
+                }
+            }
+            vinteDois.innerHTML = `
+            <div class="numero">
+                <span>22</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(22);
+            vinteDois.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>22</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido23(){
+
+        if(listaSelecionados.indexOf(23) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 23){
+                    listaSelecionados.splice(i, 23);
+                }
+            }
+            vinteTres.innerHTML = `
+            <div class="numero">
+                <span>23</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(23);
+            vinteTres.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>23</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido24(){
+
+        if(listaSelecionados.indexOf(24) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 24){
+                    listaSelecionados.splice(i, 24);
+                }
+            }
+            vinteQuatro.innerHTML = `
+            <div class="numero">
+                <span>24</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(24);
+            vinteQuatro.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>24</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido25(){
+
+        if(listaSelecionados.indexOf(25) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 25){
+                    listaSelecionados.splice(i, 25);
+                }
+            }
+            vinteCinco.innerHTML = `
+            <div class="numero">
+                <span>25</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(25);
+            vinteCinco.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>25</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido26(){
+
+        if(listaSelecionados.indexOf(26) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 26){
+                    listaSelecionados.splice(i, 26);
+                }
+            }
+            vinteSeis.innerHTML = `
+            <div class="numero">
+                <span>26</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(26);
+            vinteSeis.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>26</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido27(){
+
+        if(listaSelecionados.indexOf(27) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 27){
+                    listaSelecionados.splice(i, 27);
+                }
+            }
+            vinteSete.innerHTML = `
+            <div class="numero">
+                <span>27</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(27);
+            vinteSete.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>27</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido28(){
+
+        if(listaSelecionados.indexOf(28) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 28){
+                    listaSelecionados.splice(i, 28);
+                }
+            }
+            vinteOito.innerHTML = `
+            <div class="numero">
+                <span>28</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(28);
+            vinteOito.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>28</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido29(){
+
+        if(listaSelecionados.indexOf(29) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 29){
+                    listaSelecionados.splice(i, 29);
+                }
+            }
+            vinteNove.innerHTML = `
+            <div class="numero">
+                <span>29</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(29);
+            vinteNove.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>29</span>
+            </div>
+            `
+
+        }
+
+    }
+
+    function numeroEscolhido30(){
+
+        if(listaSelecionados.indexOf(30) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 30){
+                    listaSelecionados.splice(i, 30);
+                }
+            }
+            trinta.innerHTML = `
+            <div class="numero">
+                <span>30</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(30);
+            trinta.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>30</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido31(){
+
+        if(listaSelecionados.indexOf(31) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 31){
+                    listaSelecionados.splice(i, 31);
+                }
+            }
+            trintaUm.innerHTML = `
+            <div class="numero">
+                <span>31</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(31);
+            trintaUm.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>31</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido32(){
+
+        if(listaSelecionados.indexOf(32) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 32){
+                    listaSelecionados.splice(i, 32);
+                }
+            }
+            trintaDois.innerHTML = `
+            <div class="numero">
+                <span>32</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(32);
+            trintaDois.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>32</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido33(){
+
+        if(listaSelecionados.indexOf(33) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 33){
+                    listaSelecionados.splice(i, 33);
+                }
+            }
+            trintaTres.innerHTML = `
+            <div class="numero">
+                <span>33</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(33);
+            trintaTres.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>33</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido34(){
+
+        if(listaSelecionados.indexOf(34) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 34){
+                    listaSelecionados.splice(i, 34);
+                }
+            }
+            trintaQuatro.innerHTML = `
+            <div class="numero">
+                <span>34</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(34);
+            trintaQuatro.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>34</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido35(){
+
+        if(listaSelecionados.indexOf(35) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 35){
+                    listaSelecionados.splice(i, 35);
+                }
+            }
+            trintaCinco.innerHTML = `
+            <div class="numero">
+                <span>35</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(35);
+            trintaCinco.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>35</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido36(){
+
+        if(listaSelecionados.indexOf(36) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 36){
+                    listaSelecionados.splice(i, 36);
+                }
+            }
+            trintaSeis.innerHTML = `
+            <div class="numero">
+                <span>36</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(36);
+            trintaSeis.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>36</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido37(){
+
+        if(listaSelecionados.indexOf(37) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 37){
+                    listaSelecionados.splice(i, 37);
+                }
+            }
+            trintaSete.innerHTML = `
+            <div class="numero">
+                <span>37</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(37);
+            trintaSete.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>37</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido38(){
+
+        if(listaSelecionados.indexOf(38) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 38){
+                    listaSelecionados.splice(i, 38);
+                }
+            }
+            trintaOito.innerHTML = `
+            <div class="numero">
+                <span>38</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(38);
+            trintaOito.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>38</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido39(){
+
+        if(listaSelecionados.indexOf(39) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 39){
+                    listaSelecionados.splice(i, 39);
+                }
+            }
+            trintaNove.innerHTML = `
+            <div class="numero">
+                <span>39</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(39);
+            trintaNove.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>39</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido40(){
+
+        if(listaSelecionados.indexOf(40) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 40){
+                    listaSelecionados.splice(i, 40);
+                }
+            }
+            quarenta.innerHTML = `
+            <div class="numero">
+                <span>40</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(40);
+            quarenta.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>40</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido41(){
+
+        if(listaSelecionados.indexOf(41) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 41){
+                    listaSelecionados.splice(i, 41);
+                }
+            }
+            quarentaUm.innerHTML = `
+            <div class="numero">
+                <span>41</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(41);
+            quarentaUm.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>41</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido42(){
+
+        if(listaSelecionados.indexOf(42) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 42){
+                    listaSelecionados.splice(i, 42);
+                }
+            }
+            quarentaDois.innerHTML = `
+            <div class="numero">
+                <span>42</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(42);
+            quarentaDois.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>42</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido43(){
+
+        if(listaSelecionados.indexOf(43) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 43){
+                    listaSelecionados.splice(i, 43);
+                }
+            }
+            quarentaTres.innerHTML = `
+            <div class="numero">
+                <span>43</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(43);
+            quarentaTres.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>43</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido44(){
+
+        if(listaSelecionados.indexOf(44) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 44){
+                    listaSelecionados.splice(i, 44);
+                }
+            }
+            quarentaQuatro.innerHTML = `
+            <div class="numero">
+                <span>44</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(44);
+            quarentaQuatro.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>44</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido45(){
+
+        if(listaSelecionados.indexOf(45) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 45){
+                    listaSelecionados.splice(i, 45);
+                }
+            }
+            quarentaCinco.innerHTML = `
+            <div class="numero">
+                <span>45</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(45);
+            quarentaCinco.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>45</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido46(){
+
+        if(listaSelecionados.indexOf(46) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 46){
+                    listaSelecionados.splice(i, 46);
+                }
+            }
+            quarentaSeis.innerHTML = `
+            <div class="numero">
+                <span>46</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(46);
+            quarentaSeis.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>46</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido47(){
+
+        if(listaSelecionados.indexOf(47) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 47){
+                    listaSelecionados.splice(i, 47);
+                }
+            }
+            quarentaSete.innerHTML = `
+            <div class="numero">
+                <span>47</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(47);
+            quarentaSete.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>47</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido48(){
+
+        if(listaSelecionados.indexOf(48) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 48){
+                    listaSelecionados.splice(i, 48);
+                }
+            }
+            quarentaOito.innerHTML = `
+            <div class="numero">
+                <span>48</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(48);
+            quarentaOito.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>48</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido49(){
+
+        if(listaSelecionados.indexOf(49) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 49){
+                    listaSelecionados.splice(i, 49);
+                }
+            }
+            quarentaNove.innerHTML = `
+            <div class="numero">
+                <span>49</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(49);
+            quarentaNove.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>49</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido50(){
+
+        if(listaSelecionados.indexOf(50) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 50){
+                    listaSelecionados.splice(i, 50);
+                }
+            }
+            cinquenta.innerHTML = `
+            <div class="numero">
+                <span>50</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(50);
+            cinquenta.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>50</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido51(){
+
+        if(listaSelecionados.indexOf(51) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 51){
+                    listaSelecionados.splice(i, 51);
+                }
+            }
+            cinquentaUm.innerHTML = `
+            <div class="numero">
+                <span>51</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(51);
+            cinquentaUm.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>51</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido52(){
+
+        if(listaSelecionados.indexOf(52) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 52){
+                    listaSelecionados.splice(i, 52);
+                }
+            }
+            cinquentaDois.innerHTML = `
+            <div class="numero">
+                <span>52</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(52);
+            cinquentaDois.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>52</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido53(){
+
+        if(listaSelecionados.indexOf(53) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 53){
+                    listaSelecionados.splice(i, 53);
+                }
+            }
+            cinquentaTres.innerHTML = `
+            <div class="numero">
+                <span>53</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(53);
+            cinquentaTres.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>53</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido54(){
+
+        if(listaSelecionados.indexOf(54) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 54){
+                    listaSelecionados.splice(i, 54);
+                }
+            }
+            cinquentaQuatro.innerHTML = `
+            <div class="numero">
+                <span>54</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(54);
+            cinquentaQuatro.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>54</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido55(){
+
+        if(listaSelecionados.indexOf(55) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 55){
+                    listaSelecionados.splice(i, 55);
+                }
+            }
+            cinquentaCinco.innerHTML = `
+            <div class="numero">
+                <span>55</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(55);
+            cinquentaCinco.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>55</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido56(){
+
+        if(listaSelecionados.indexOf(56) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 56){
+                    listaSelecionados.splice(i, 56);
+                }
+            }
+            cinquentaSeis.innerHTML = `
+            <div class="numero">
+                <span>56</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(56);
+            cinquentaSeis.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>56</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido57(){
+
+        if(listaSelecionados.indexOf(57) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 57){
+                    listaSelecionados.splice(i, 57);
+                }
+            }
+            cinquentaSete.innerHTML = `
+            <div class="numero">
+                <span>57</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(57);
+            cinquentaSete.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>57</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido58(){
+
+        if(listaSelecionados.indexOf(58) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 58){
+                    listaSelecionados.splice(i, 58);
+                }
+            }
+            cinquentaOito.innerHTML = `
+            <div class="numero">
+                <span>58</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(58);
+            cinquentaOito.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>58</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido59(){
+
+        if(listaSelecionados.indexOf(59) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 59){
+                    listaSelecionados.splice(i, 59);
+                }
+            }
+            cinquentaNove.innerHTML = `
+            <div class="numero">
+                <span>59</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(59);
+            cinquentaNove.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>59</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido60(){
+
+        if(listaSelecionados.indexOf(60) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 60){
+                    listaSelecionados.splice(i, 60);
+                }
+            }
+            sessenta.innerHTML = `
+            <div class="numero">
+                <span>60</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(60);
+            sessenta.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>60</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido61(){
+
+        if(listaSelecionados.indexOf(61) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 61){
+                    listaSelecionados.splice(i, 61);
+                }
+            }
+            sessentaUm.innerHTML = `
+            <div class="numero">
+                <span>61</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(61);
+            sessentaUm.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>61</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido62(){
+
+        if(listaSelecionados.indexOf(62) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 62){
+                    listaSelecionados.splice(i, 62);
+                }
+            }
+            sessentaDois.innerHTML = `
+            <div class="numero">
+                <span>62</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(62);
+            sessentaDois.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>62</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido63(){
+
+        if(listaSelecionados.indexOf(63) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 63){
+                    listaSelecionados.splice(i, 63);
+                }
+            }
+            sessentaTres.innerHTML = `
+            <div class="numero">
+                <span>63</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(63);
+            sessentaTres.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>63</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido64(){
+
+        if(listaSelecionados.indexOf(64) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 64){
+                    listaSelecionados.splice(i, 64);
+                }
+            }
+            sessentaQuatro.innerHTML = `
+            <div class="numero">
+                <span>64</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(64);
+            sessentaQuatro.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>64</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido65(){
+
+        if(listaSelecionados.indexOf(65) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 65){
+                    listaSelecionados.splice(i, 65);
+                }
+            }
+            sessentaCinco.innerHTML = `
+            <div class="numero">
+                <span>65</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(65);
+            sessentaCinco.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>65</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido66(){
+
+        if(listaSelecionados.indexOf(66) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 66){
+                    listaSelecionados.splice(i, 66);
+                }
+            }
+            sessentaSeis.innerHTML = `
+            <div class="numero">
+                <span>66</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(66);
+            sessentaSeis.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>66</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido67(){
+
+        if(listaSelecionados.indexOf(67) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 67){
+                    listaSelecionados.splice(i, 67);
+                }
+            }
+            sessentaSete.innerHTML = `
+            <div class="numero">
+                <span>67</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(67);
+            sessentaSete.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>67</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido68(){
+
+        if(listaSelecionados.indexOf(68) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 68){
+                    listaSelecionados.splice(i, 68);
+                }
+            }
+            sessentaOito.innerHTML = `
+            <div class="numero">
+                <span>68</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(68);
+            sessentaOito.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>68</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido69(){
+
+        if(listaSelecionados.indexOf(69) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 69){
+                    listaSelecionados.splice(i, 69);
+                }
+            }
+            sessentaNove.innerHTML = `
+            <div class="numero">
+                <span>69</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(69);
+            sessentaNove.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>69</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido70(){
+
+        if(listaSelecionados.indexOf(70) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 70){
+                    listaSelecionados.splice(i, 70);
+                }
+            }
+            setenta.innerHTML = `
+            <div class="numero">
+                <span>70</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(70);
+            setenta.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>70</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido71(){
+
+        if(listaSelecionados.indexOf(71) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 71){
+                    listaSelecionados.splice(i, 71);
+                }
+            }
+            setentaUm.innerHTML = `
+            <div class="numero">
+                <span>71</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(71);
+            setentaUm.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>71</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido72(){
+
+        if(listaSelecionados.indexOf(72) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 72){
+                    listaSelecionados.splice(i, 72);
+                }
+            }
+            setentaDois.innerHTML = `
+            <div class="numero">
+                <span>72</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(72);
+            setentaDois.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>72</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido73(){
+
+        if(listaSelecionados.indexOf(73) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 73){
+                    listaSelecionados.splice(i, 73);
+                }
+            }
+            setentaTres.innerHTML = `
+            <div class="numero">
+                <span>73</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(73);
+            setentaTres.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>73</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido74(){
+
+        if(listaSelecionados.indexOf(74) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 74){
+                    listaSelecionados.splice(i, 74);
+                }
+            }
+            setentaQuatro.innerHTML = `
+            <div class="numero">
+                <span>74</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(74);
+            setentaQuatro.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>74</span>
+            </div>
+            `
+
+        }
+
+    }
+    function numeroEscolhido75(){
+
+        if(listaSelecionados.indexOf(75) >= 0){
+            for(i = 0; i < listaSelecionados.length; i++){
+                if( listaSelecionados[i] == 75){
+                    listaSelecionados.splice(i, 75);
+                }
+            }
+            setentaCinco.innerHTML = `
+            <div class="numero">
+                <span>75</span>
+                </div>
+                `
+            } else{
+                listaSelecionados.push(75);
+            setentaCinco.innerHTML = `
+            <div class="numero numeroEscolhido">
+                <span>75</span>
+            </div>
+            `
+
+        }
+
+    }
+</script>
